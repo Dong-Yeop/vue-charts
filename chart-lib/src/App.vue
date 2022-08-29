@@ -13,7 +13,7 @@ import LineChart from './components/LineChart.vue';
 export default {
   components: {
     BarChart,
-    LineChart
+    LineChart,
   }
 }
 </script>

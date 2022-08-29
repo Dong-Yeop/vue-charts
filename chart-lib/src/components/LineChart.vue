@@ -1,10 +1,8 @@
 <template>
-  <canvas id="lineChart" width="400" height="400"></canvas>
+  <canvas ref="lineChart"></canvas>
 </template>
 
 <script>
-import Chart from 'chart.js/auto';
-
 export default {
   mounted() {
     const labels = [
@@ -32,8 +30,9 @@ export default {
       options: {}
     };
     
-    const myChart = new Chart(
-      document.getElementById('lineChart'),
+    const myChart = new this.$_Chart(
+      // document.getElementById('lineChart'),
+      this.$refs.lineChart,
       config
     );
     console.log(myChart);
